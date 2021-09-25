@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
+import './css/style.css';
 
 class App extends Component {
 
@@ -39,9 +40,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Lab 08 </h1>
-        <h3>Type the city you would like to get information about</h3>
-        <form onSubmit={this.getCityInfo}>
+        <h1 className= 'header'>Lab 08 </h1>
+        <h3 className='text'>Type the city you would like to get information about</h3>
+        <form onSubmit={this.getCityInfo} className='text'>
           <input type="text" placeholder="Enter the city name" name='cityQuery'/>
           <button >Get info</button>
           <p></p>
@@ -52,8 +53,9 @@ class App extends Component {
           {this.state.weatherDataArr.map(element => {
             return (
               <>
-              <p>{element.description}</p>
-              <p>{element.date}</p>
+              <p className='text'>{element.description}</p>
+              <p className='text'>{element.date}</p>
+              <p className='text'>---------------</p>
               </>
             )
           })}
