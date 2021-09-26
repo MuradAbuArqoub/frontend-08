@@ -24,8 +24,8 @@ class App extends Component {
       // weatherDataArr: weatherData.data
     })
 
-    // let url = `https://weather-class-08.herokuapp.com/weather?city=${this.state.cityQuery}`
     let weatherURL = `https://weather-class-08.herokuapp.com/weather?city=${this.state.cityQuery}`
+    // let weatherURL = `http://localhost:3001/weather?city=${this.state.cityQuery}`
     let moviesURL = `https://weather-class-08.herokuapp.com/movies?api_key=${process.env.MOVIES_API_KEY}&query=${this.state.cityQuery}`
 
 
