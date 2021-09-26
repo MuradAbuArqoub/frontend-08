@@ -25,8 +25,8 @@ class App extends Component {
     })
 
     // let url = `https://weather-class-08.herokuapp.com/weather?city=${this.state.cityQuery}`
-    let weatherURL = `http://localhost:3001/weather?city=${this.state.cityQuery}`
-    let moviesURL = `http://localhost:3001/movies?api_key=${process.env.MOVIES_API_KEY}&query=${this.state.cityQuery}`
+    let weatherURL = `https://weather-class-08.herokuapp.com/weather?city=${this.state.cityQuery}&key=${process.env.WEATHER_API_KEY}`
+    let moviesURL = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIES_API_KEY}&query=${this.state.cityQuery}`
 
 
     let weatherData = await axios.get(weatherURL)
