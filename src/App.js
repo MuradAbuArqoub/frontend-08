@@ -28,10 +28,14 @@ class App extends Component {
     // let weatherURL = `http://localhost:3001/weather?city=${this.state.cityQuery}`
     let moviesURL = `https://weather-class-08.herokuapp.com/movies?api_key=${process.env.MOVIES_API_KEY}&query=${this.state.cityQuery}`
 
+    console.log(weatherURL)
 
     let weatherData = await axios.get(weatherURL)
+    console.log('asdasd')
+    console.log(weatherData)
     let moviesData = await axios.get(moviesURL)
 
+    
     this.setState({
       weatherDataArr: weatherData.data,
       moviesDataArr: moviesData.data,
@@ -42,9 +46,10 @@ class App extends Component {
 
 
   render() {
-
+    
     return (
       <div>
+        {console.log(this.state)}
         <h1 className='header'>Lab 08 </h1>
         <h3 className='text'>Type the city you would like to get information about</h3>
 
